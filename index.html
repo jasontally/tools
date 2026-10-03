@@ -339,34 +339,45 @@
       </section>
       <section id="icanhazip-tools" class="pt-12 pb-6">
         <h2 class="text-2xl font-semibold tracking-wide">
-          icanhazip and whoami inspired tools
+          Tools inspired by icanhazip
         </h2>
         <p class="mt-4">
-          The shell command <code class="text-sm">whoami</code> has printed the
-          current user and nothing else for decades, and
+          Major Hayden put icanhazip.com online in the summer of 2009. He made
+          it for his own team, which ran a lot of servers, and he wrote about it
+          in
           <a
-            href="https://github.com/jasontally/icanhazip"
+            href="https://major.io/p/get-the-public-facing-ip-for-any-server-with-icanhazip-com/"
             class="text-accent underline decoration-dashed underline-offset-4 hover:underline"
-            >icanhazip</a
+            >Get the public-facing IP for any server with icanhazip.com</a
+          >. Traffic grew fast. A Lifehacker article in 2011 brought more
+          requests than he could serve, and by 2021 the site was answering tens
+          of billions of requests a day. That year Hayden
+          <a
+            href="https://major.io/p/a-new-future-for-icanhazip/"
+            class="text-accent underline decoration-dashed underline-offset-4 hover:underline"
+            >handed the hosting over</a
           >
-          has answered with a single line, your public IP address, since 2010.
-          Both succeed for the same reason. They do one thing. They return a
-          plain value as plain text, so a terminal, a script or a person can
-          read it without looking at a page around it. Nothing is hidden and
-          nothing has to be parsed. That is the whole appeal, and many small
-          services have copied the idea since, each one answering a single
-          question about your connection.
+          and told the whole story. The answer never changed. One value, one
+          line of plain text, and no page around it, so a terminal, a script or
+          a person can read it without parsing anything. That restraint is the
+          whole appeal, and many small services have copied the idea since, each
+          one answering a single question about a connection.
         </p>
         <p class="mt-4">
           I built these tools after finding that pattern worth copying. Every
           question a request already knows the answer to has its own address,
-          so 67 hostnames answer with one value each and nothing else. They are
-          robust, because there is very little in them that can break. They are
-          fast, and answer in about the time of a DNS lookup. They cost almost
-          nothing to host, so there is no reason to put a front page, an
-          account or a sign-up in front of them. Add the path
-          <code class="text-sm">whoami</code> to any of them and you get the
-          whole page instead.
+          so
+          <a
+            href="https://github.com/jasontally/icanhazip"
+            class="text-accent underline decoration-dashed underline-offset-4 hover:underline"
+            >67 hostnames</a
+          >
+          answer with one value each and nothing else. They are robust, because
+          there is very little in them that can break. They are fast, and answer
+          in about the time of a DNS lookup. They cost almost nothing to host,
+          so there is no reason to put a front page, an account or a sign-up in
+          front of them. Add the path <code class="text-sm">whoami</code> to any
+          of them and you get the whole page instead.
         </p>
         <div class="flex flex-wrap gap-2 mt-6">
           <a
@@ -437,9 +448,9 @@
         </div>
         <h3 class="mt-8 mb-2 text-lg font-semibold tracking-wide">Location</h3>
         <p class="mb-2 opacity-80">
-          Where the network thinks you are. These come from the network, not from
-          a GPS fix, so the city and the postal code can be approximate. The
-          region hosts give the long name, then fall back to the code.
+          Where the network thinks you are. These come from the network, not
+          from a GPS fix, so the city and the postal code can be approximate.
+          The region hosts give the long name, then fall back to the code.
         </p>
         <div class="flex flex-wrap gap-2">
           <a
