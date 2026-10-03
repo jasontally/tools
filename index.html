@@ -993,4 +993,18 @@
     document.querySelector("#main-content")?.dataset?.layout &&
       sessionStorage.setItem("backUrl", "/");
   });
+
+  // The view transition router turns off the scroll restoration of the browser,
+  // and it saves the scroll position only for links that stay on this site.
+  // Save the position here as well, so the back button returns to the same
+  // place after a link to another site.
+  addEventListener("pagehide", () => {
+    history.replaceState({ ...(history.state ?? {}), scrollX, scrollY }, "");
+  });
+
+  addEventListener("pageshow", (event) => {
+    if (!event.persisted) return;
+    const { scrollX: x = 0, scrollY: y = 0 } = history.state ?? {};
+    scrollTo(x, y);
+  });
 </script>
