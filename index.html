@@ -362,7 +362,7 @@
           <a
             href="https://github.com/jasontally/icanhazip"
             class="text-accent underline decoration-dashed underline-offset-4 hover:underline"
-            >67 hostnames</a
+            >98 hostnames</a
           >
           answers with one value and nothing else. They are simple, robust and
           fast. Add the path <code class="text-sm">whoami</code> to any of them
@@ -771,12 +771,185 @@
           >
         </div>
         <h3 class="mt-8 mb-2 text-lg font-semibold tracking-wide">Time</h3>
-        <p class="mb-2 opacity-80">The time of the request, in ISO 8601.</p>
+        <p class="mb-2 opacity-80">
+          The time of the request, in UTC. Every host here is a slice of the
+          same clock, so they all agree with each other. The full stamp is ISO
+          8601, and the epoch hosts count seconds since 1970.
+        </p>
         <div class="flex flex-wrap gap-2">
           <a
             href="https://utc.jasontally.com"
             class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
             >utc</a
+          >
+          <a
+            href="https://now.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >now</a
+          >
+          <a
+            href="https://date.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >date</a
+          >
+          <a
+            href="https://today.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >today</a
+          >
+          <a
+            href="https://utcdate.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >utcdate</a
+          >
+          <a
+            href="https://day.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >day</a
+          >
+          <a
+            href="https://time.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >time</a
+          >
+          <a
+            href="https://utctime.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >utctime</a
+          >
+          <a
+            href="https://clock.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >clock</a
+          >
+          <a
+            href="https://epoch.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >epoch</a
+          >
+          <a
+            href="https://timestamp.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >timestamp</a
+          >
+          <a
+            href="https://year.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >year</a
+          >
+          <a
+            href="https://month.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >month</a
+          >
+          <a
+            href="https://hour.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >hour</a
+          >
+          <a
+            href="https://minute.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >minute</a
+          >
+          <a
+            href="https://second.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >second</a
+          >
+        </div>
+        <h3 class="mt-8 mb-2 text-lg font-semibold tracking-wide">Weather</h3>
+        <p class="mb-2 opacity-80">
+          The weather at your coordinates. The data comes from
+          <a
+            href="https://open-meteo.com/"
+            class="text-accent underline decoration-dashed underline-offset-4 hover:underline"
+            >Open-Meteo</a
+          >, which is free and needs no key. Each host asks for the one value it
+          returns, and each one asks a third party over the network, so these
+          hosts take longer than the others. They are also often empty, because
+          the coordinates come from the network and not from a GPS fix.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <a
+            href="https://temp.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >temp</a
+          >
+          <a
+            href="https://tempc.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >tempc</a
+          >
+          <a
+            href="https://celsius.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >celsius</a
+          >
+          <a
+            href="https://tempf.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >tempf</a
+          >
+          <a
+            href="https://fahrenheit.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >fahrenheit</a
+          >
+          <a
+            href="https://feels.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >feels</a
+          >
+          <a
+            href="https://humidity.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >humidity</a
+          >
+          <a
+            href="https://wind.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >wind</a
+          >
+          <a
+            href="https://clouds.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >clouds</a
+          >
+          <a
+            href="https://precip.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >precip</a
+          >
+          <a
+            href="https://elevation.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >elevation</a
+          >
+          <a
+            href="https://elev.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >elev</a
+          >
+          <a
+            href="https://sunrise.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >sunrise</a
+          >
+          <a
+            href="https://sunset.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >sunset</a
+          >
+          <a
+            href="https://weather.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >weather</a
+          >
+          <a
+            href="https://wmo.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >wmo</a
           >
         </div>
       </section>
