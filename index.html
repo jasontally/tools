@@ -362,11 +362,18 @@
           <a
             href="https://github.com/jasontally/icanhazip"
             class="text-accent underline decoration-dashed underline-offset-4 hover:underline"
-            >98 hostnames</a
+            >100 hostnames</a
           >
           answers with one value and nothing else. They are simple, robust and
           fast. Add the path <code class="text-sm">whoami</code> to any of them
           and you get a page with all the possible values.
+        </p>
+        <p class="mt-4">
+          The code carries a probe that asks every host again and again, then
+          checks each answer. Over 1200 requests the probe found no failure at
+          all. Most hosts answer in about 30 milliseconds. The weather hosts
+          and the address block hosts ask another service, so they take longer,
+          and the page for each group says so.
         </p>
         <div class="flex flex-wrap gap-2 mt-6">
           <a
@@ -383,7 +390,9 @@
         <p class="mt-2 opacity-80">
           The whoami page shows the request, location, network, TLS and browser
           sections, an interactive map, then every request header and the whole
-          request data as JSON. The map host is nothing but the map, filling the
+          request data as JSON. It has no empty box anywhere. It ends with a
+          link to the edge trace, which holds the few values the page cannot
+          read for itself. The map host is nothing but the map, filling the
           whole screen.
         </p>
         <h3 class="mt-8 mb-2 text-lg font-semibold tracking-wide">
@@ -628,8 +637,8 @@
           HTTP and TLS
         </h3>
         <p class="mb-2 opacity-80">
-          The protocol and the TLS handshake. JA3 and JA4 are sent only for
-          some requests, and the bot score only where bot management runs.
+          The protocol and the TLS handshake. The bot score arrives only where
+          bot management runs.
         </p>
         <div class="flex flex-wrap gap-2">
           <a
@@ -651,16 +660,6 @@
             href="https://cipher.jasontally.com"
             class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
             >cipher</a
-          >
-          <a
-            href="https://ja3.jasontally.com"
-            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
-            >ja3</a
-          >
-          <a
-            href="https://ja4.jasontally.com"
-            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
-            >ja4</a
           >
           <a
             href="https://bot.jasontally.com"
@@ -689,6 +688,39 @@
             href="https://lang.jasontally.com"
             class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
             >lang</a
+          >
+        </div>
+        <h3 class="mt-8 mb-2 text-lg font-semibold tracking-wide">
+          Headers and proxies
+        </h3>
+        <p class="mb-2 opacity-80">
+          What your client sent. The headers host lists every request header as
+          JSON. The proxy hosts list the proxy headers they find, and they
+          answer 204 with no body when there are none, so a script can tell no
+          proxy from an empty answer. The xff host gives the X-Forwarded-For
+          chain, left to right, and it is empty unless something upstream sent
+          one.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <a
+            href="https://headers.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >headers</a
+          >
+          <a
+            href="https://proxy.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >proxy</a
+          >
+          <a
+            href="https://proxies.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >proxies</a
+          >
+          <a
+            href="https://xff.jasontally.com"
+            class="inline-block text-sm border border-border rounded-md px-2 py-1 font-medium text-accent underline decoration-dashed underline-offset-4 whitespace-nowrap hover:underline"
+            >xff</a
           >
         </div>
         <h3 class="mt-8 mb-2 text-lg font-semibold tracking-wide">DNS</h3>
@@ -731,7 +763,9 @@
         <p class="mb-2 opacity-80">
           The allocation from the address registry. This is different data from
           the ASN hosts. The allocation and the announced prefix can differ,
-          because the announced block is sometimes tighter.
+          because the announced block is sometimes tighter. These seven hosts
+          ask a public registry over the network, so they are the slowest here
+          and the least predictable. They always answer correctly.
         </p>
         <div class="flex flex-wrap gap-2">
           <a
